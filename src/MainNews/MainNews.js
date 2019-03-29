@@ -8,15 +8,20 @@ let key = '3de0065bbdae4f598e722fe518a67288';
 class MainNews extends Component{
 
     state = {
-      top5News:[]
+      top5News:[],
+      mainNews:[],
     }
 
     componentDidMount(){
       axios.get('https://newsapi.org/v2/top-headlines?country=us&apiKey=' + key)
       .then(response =>{
-        let articles = response.data.articles;
-        this.setState({ top5News:articles })
-        console.log(articles);
+        let top5 = response.data.articles.slice(0,5);
+        let mainNews = response.data.articles.slice(6,19);
+        this.setState({
+          top5News:top5,
+          mainNews:mainNews
+        })
+        console.log(mainNews);
       })
     }
 
@@ -31,6 +36,7 @@ class MainNews extends Component{
           return <TopNews
                     key={article.url}
                     source={article.source.name}
+                    published={article.publishedAt}
                     title={article.title}
                     url={article.url}
                     imgUrl={article.urlToImage}/>
@@ -40,9 +46,17 @@ class MainNews extends Component{
      }
 
      return(
+      <React.Fragment>
        <div className={styles.TopNews}>
+       <h3>Top 5 Stories</h3>
        {topArticles}
        </div>
+
+       <div>
+       
+       </div>
+
+      </React.Fragment>
      )
 
   }
