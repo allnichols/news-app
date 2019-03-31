@@ -55,6 +55,7 @@ class MainNews extends Component{
                     source={story.source.name}
                     title={story.title}
                     imgUrl={story.urlToImage}
+                    published={story.publishedAt}
                   />
           })}
         </div>

@@ -1,18 +1,45 @@
 .MoreStories{
-  height: 300px;
-  border: 1px solid grey;
+  height: 170px;
+  width: 90%;
+  border-bottom: 1px solid lightgrey;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 15px;
+  margin: 10px auto;
 }
 
-.MoreStories img{
-  width: 125px;
+.titleContainer p,
+.titleContainer h4{
+  text-align: left;
+}
+
+.titleContainer h4{
+  font-weight: 600;
+  padding-right: 10px;
+  margin-top: 2px;
+}
+
+.titleContainer p{
+  font-size: 12px;
+  margin-top: 0px;
+}
+
+
+.titleContainer a{
+  cursor: pointer;
+}
+
+
+.imgContainer{
+  order: 3;
   border-radius: 10px;
 }
 
-.imgContainer{
-  width: 130px;
-  height: 200px;
-}
 
 .imgContainer img{
   object-fit: cover;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
 }

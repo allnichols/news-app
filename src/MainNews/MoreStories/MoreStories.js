@@ -3,6 +3,8 @@ import styles from './MoreStories.module.css';
 
 const moreStories = (props) => {
 
+  let published = props.published;
+
     return (
       <div  className={styles.MoreStories} key={props.id}>
 
@@ -14,9 +16,10 @@ const moreStories = (props) => {
           <p>{props.source}</p>
 
           <a href={props.url}>
-            <h5>{props.title}</h5>
+            <h4>{props.title}</h4>
           </a>
 
+          <p> Published - {published}</p>
         </div>
 
       </div>
