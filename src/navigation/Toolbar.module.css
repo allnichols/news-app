@@ -24,3 +24,20 @@
   letter-spacing: 3px;
   cursor: pointer;
 }
+
+.Burger{
+  margin-top: 17px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.Burger span{
+  background-color: white;
+  padding: 1px;
+  margin: 2px;
+  height: 2px;
+  width: 35px;
+  border-radius: 5px;
+  cursor: pointer;
+}

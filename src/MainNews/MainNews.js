@@ -53,6 +53,7 @@ class MainNews extends Component{
             return <MoreStories
                     key={story.url}
                     source={story.source.name}
+                    url={story.url}
                     title={story.title}
                     imgUrl={story.urlToImage}
                     published={story.publishedAt}

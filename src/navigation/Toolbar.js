@@ -10,6 +10,12 @@ const toolbar = (props) => (
 
       <nav>
         <NavItems/>
+        <div className={styles.Burger}  onClick={props.clicked}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
       </nav>
   </header>
 );
