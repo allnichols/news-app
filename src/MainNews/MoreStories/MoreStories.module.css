@@ -1,0 +1,18 @@
+.MoreStories{
+  height: 300px;
+  border: 1px solid grey;
+}
+
+.MoreStories img{
+  width: 125px;
+  border-radius: 10px;
+}
+
+.imgContainer{
+  width: 130px;
+  height: 200px;
+}
+
+.imgContainer img{
+  object-fit: cover;
+}

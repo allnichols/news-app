@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import TopNews from './TopNews';
+import MoreStories from './MoreStories/MoreStories';
 import axios from 'axios';
 import styles from './TopNews.module.css';
 
@@ -26,9 +27,8 @@ class MainNews extends Component{
     }
 
   render(){
-
+//top 5 articles
     let topArticles = null;
-
      if ( this.state.top5News.length >= 1) {
        topArticles = (
          <div>
@@ -44,16 +44,33 @@ class MainNews extends Component{
          </div>
        )
      }
+//The rest of the articles on the main page.
+    let otherStories = null;
+     if ( this.state.mainNews.length >= 1) {
+       otherStories = (
+         <div>
+          {this.state.mainNews.map(story => {
+            return <MoreStories
+                    key={story.url}
+                    source={story.source.name}
+                    title={story.title}
+                    imgUrl={story.urlToImage}
+                  />
+          })}
+        </div>
+       )
+     }
+
 
      return(
       <React.Fragment>
        <div className={styles.TopNews}>
-       <h3>Top 5 Stories</h3>
-       {topArticles}
+         <h3>Top 5 Stories</h3>
+         {topArticles}
        </div>
 
        <div>
-       
+        {otherStories}
        </div>
 
       </React.Fragment>
