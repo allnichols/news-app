@@ -25,6 +25,15 @@
   cursor: pointer;
 }
 
+.NavItems{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: none;
+  align-items: center;
+  height: 100%;
+}
+
 .Burger{
   margin-top: 17px;
   display: flex;

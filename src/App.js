@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import MainNews from './MainNews/MainNews';
-import Toolbar from './navigation/Toolbar';
-import MobileNav from './navigation/MobileNav/MobileNav';
+
 import { BrowserRouter } from 'react-router-dom';
+
+
 
 class App extends Component {
 
@@ -13,15 +14,17 @@ class App extends Component {
 
   toggleMobileMenuHandler = () =>{
     this.setState( { mobileToggle: !this.state.mobileToggle} );
+    console.log(this.state.mobileToggle);
   }
 
   render() {
     return (
       <BrowserRouter>
         <div className="App">
-          <MobileNav  open={this.state.mobileToggle}/>
-          <Toolbar clicked={this.toggleMobileMenuHandler}/>
-          <MainNews />
+
+          <MainNews
+          open={this.state.mobileToggle}
+          clicked={this.toggleMobileMenuHandler} />
         </div>
       </BrowserRouter>
     );

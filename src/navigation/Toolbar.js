@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Toolbar.module.css';
+// import styles from './Toolbar.module.css';
 import NavItems from './NavItems/NavItems';
 
 const toolbar = (props) => (
@@ -20,4 +20,4 @@ const toolbar = (props) => (
   </header>
 );
 
-export default toolbar;
+// export default toolbar;

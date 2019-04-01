@@ -1,28 +1,28 @@
 import React from 'react';
 import styles from './TopNews.module.css';
 
-const topNewsMain = ( props ) => {
+const topNews = (props) => {
 
-  let published = props.published;
   return(
-      <div className={styles.TopArticles} key={props.id}>
+    <div  className={styles.TopNews} key={props.id}>
 
-        <img src={props.imgUrl} alt="article"/>
+    <div className={styles.imgContainer} >
+      <img src={props.imgUrl} alt="article"/>
+    </div>
 
-        <div className={styles.titleContainer}>
-          <p>{props.source}</p>
+      <div className={styles.titleContainer}>
+        <p>{props.source}</p>
 
-          <a href={props.url}>
-            <h5>{props.title}</h5>
-          </a>
+        <a href={props.url}>
+          <h4>{props.title}</h4>
+        </a>
 
-          <p className={styles.Published}>Published - {published}</p>
-        </div>
-
+        <p> Published </p>
       </div>
 
+    </div>
   )
 
 }
 
-export default topNewsMain;
+export default topNews;
