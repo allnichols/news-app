@@ -43,7 +43,7 @@ class MainNews extends Component{
       </header>
       <Switch>
         <Route path='/' exact component={TopNewsMain} />
-        <Route path='/Topic' exact component={Topics} />
+        <Route path='/:id'   component={Topics} />
       </Switch>
 
     </React.Fragment>
