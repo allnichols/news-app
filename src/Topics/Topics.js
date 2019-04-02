@@ -6,10 +6,18 @@ class Topics extends Component{
     topic:'',
   }
 
+  componentDidMount(){
+    console.log(this.props);
+  }
+
   render(){
 
+
+
     return (
-      <p>Topic Page</p>
+      <div>
+        <p>Topic Page</p>
+      </div>
     )
 
   }

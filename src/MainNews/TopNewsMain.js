@@ -14,6 +14,7 @@ class TopNewsMain extends Component {
   }
 
   componentDidMount(){
+    console.log(this.props);
     axios.get('https://newsapi.org/v2/top-headlines?country=us&apiKey=' + key)
     .then(response =>{
       let top5 = response.data.articles.slice(0,5);

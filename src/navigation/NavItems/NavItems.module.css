@@ -1,0 +1,9 @@
+.NavItems{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: none;
+  align-items: center;
+  text-align: left;
+  height: 100%;
+}

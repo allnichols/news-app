@@ -4,7 +4,7 @@ import styles from './TopNews.module.css';
 const topNews = (props) => {
 
   return(
-    <div  className={styles.TopNews} key={props.id}>
+    <div  className={styles.TopArticles} key={props.id}>
 
     <div className={styles.imgContainer} >
       <img src={props.imgUrl} alt="article"/>
@@ -14,7 +14,7 @@ const topNews = (props) => {
         <p>{props.source}</p>
 
         <a href={props.url}>
-          <h4>{props.title}</h4>
+          <h5>{props.title}</h5>
         </a>
 
         <p> Published </p>

@@ -10,7 +10,6 @@
   align-items: center;
   padding: 0 20px;
   box-sizing: border-box;
-  z-index: 90;
 }
 
 .Toolbar nav{
@@ -25,14 +24,6 @@
   cursor: pointer;
 }
 
-.NavItems{
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: none;
-  align-items: center;
-  height: 100%;
-}
 
 .Burger{
   margin-top: 17px;
