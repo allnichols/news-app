@@ -26,7 +26,7 @@ class MainNews extends Component{
     <React.Fragment>
       <header className={styles.Toolbar}>
           <div>
-            <h2>The News</h2>
+            <h2>The News </h2>
           </div>
 
           <nav>
