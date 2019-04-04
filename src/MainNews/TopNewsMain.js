@@ -19,7 +19,7 @@ class TopNewsMain extends Component {
     .then(response =>{
       let top5 = response.data.articles.slice(0,5);
       let mainNews = response.data.articles.slice(6,19);
-      
+
       this.setState({
         top5News:top5,
         mainNews:mainNews
@@ -68,7 +68,7 @@ class TopNewsMain extends Component {
      return(
       <React.Fragment>
        <div className={styles.TopNews}>
-         <h3>Top 5 Stories</h3>
+         <h2>Top Stories</h2>
          {topArticles}
        </div>
 

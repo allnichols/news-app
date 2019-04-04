@@ -2,6 +2,9 @@ import React from 'react';
 import styles from './TopTopic.module.css';
 
 const topicTop = (props) => {
+
+  let published = props.published.slice(0,10);
+
   return(
     <div key={props.id} className={styles.Top}>
 
@@ -16,7 +19,7 @@ const topicTop = (props) => {
           <h5>{props.title}</h5>
         </a>
 
-        <p> Published </p>
+        <p> Published - {published} </p>
       </div>
 
     </div>

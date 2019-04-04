@@ -57,6 +57,7 @@ class Topics extends Component{
             source={story.source.name}
             url={story.url}
             title={story.title}
+            published={story.publishedAt}
           />
         )
     });
