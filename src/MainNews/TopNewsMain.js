@@ -40,7 +40,8 @@ class TopNewsMain extends Component {
                     published={article.publishedAt}
                     title={article.title}
                     url={article.url}
-                    imgUrl={article.urlToImage}/>
+                    imgUrl={article.urlToImage}
+                    description={article.description}/>
          })}
          </div>
        )
@@ -67,8 +68,9 @@ class TopNewsMain extends Component {
 
      return(
       <React.Fragment>
+           <h2 className={styles.Title}>Top Stories</h2>
        <div className={styles.TopNews}>
-         <h2>Top Stories</h2>
+
          {topArticles}
        </div>
 

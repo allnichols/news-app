@@ -17,9 +17,15 @@ const topNews = (props) => {
           <h5>{props.title}</h5>
         </a>
 
-        <p> Published </p>
+
+
+        <div className={styles.containerDesc}>
+          <p>{props.description} <a href="#!">read more...</a></p>
       </div>
 
+      <p> Published </p>
+
+      </div>
     </div>
   )
 
