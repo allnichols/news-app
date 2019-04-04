@@ -6,11 +6,12 @@
   left: 0;
   background:#4682B4;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 0 20px;
   box-sizing: border-box;
 }
+
 
 .Toolbar nav{
   height: 100%;
@@ -40,4 +41,10 @@
   width: 35px;
   border-radius: 5px;
   cursor: pointer;
+}
+
+@media (min-width:765px) {
+  .Burger{
+    display: none;
+  }
 }

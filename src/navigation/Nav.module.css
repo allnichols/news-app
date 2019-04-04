@@ -1,0 +1,11 @@
+
+.Nav li {
+  display: inline;
+  padding: 5px 10px;
+}
+
+.Nav li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}

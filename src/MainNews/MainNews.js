@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import TopNewsMain from './TopNewsMain';
+import Nav from '../navigation/Nav';
 import MobileNav from '../navigation/MobileNav/MobileNav';
 import Topics from '../Topics/Topics';
 import {Route, Switch} from 'react-router-dom';
@@ -25,6 +26,7 @@ class MainNews extends Component{
     return(
     <React.Fragment>
       <header className={styles.Toolbar}>
+
           <div>
             <h2>The News </h2>
           </div>
@@ -32,6 +34,7 @@ class MainNews extends Component{
           <nav>
 
             <MobileNav open={this.state.mobileToggle} />
+            <Nav />
 
           <div className={styles.Burger}  onClick={this.toggleMobileMenuHandler}>
             <span></span>
@@ -40,6 +43,7 @@ class MainNews extends Component{
           </div>
 
           </nav>
+          
       </header>
       <Switch>
         <Route path='/' exact component={TopNewsMain} />
