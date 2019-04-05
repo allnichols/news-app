@@ -1,0 +1,50 @@
+.Toolbar {
+  height: 56px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background:#4682B4;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+
+.Toolbar nav{
+  height: 100%;
+}
+
+.Toolbar h2{
+  color: white;
+  font-family: fantasy;
+  font-weight: lighter;
+  letter-spacing: 3px;
+  cursor: pointer;
+}
+
+
+.Burger{
+  margin-top: 17px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.Burger span{
+  background-color: white;
+  padding: 1px;
+  margin: 2px;
+  height: 2px;
+  width: 35px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (min-width:765px) {
+  .Burger{
+    display: none;
+  }
+}

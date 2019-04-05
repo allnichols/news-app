@@ -1,12 +1,22 @@
 import React, { Component } from 'react';
 import './App.css';
+import MainNews from './MainNews/MainNews';
+
+import { BrowserRouter } from 'react-router-dom';
+
+
 
 class App extends Component {
+
   render() {
     return (
-      <div className="App">
+      <BrowserRouter>
+        <div className="App">
 
-      </div>
+          <MainNews />
+          
+        </div>
+      </BrowserRouter>
     );
   }
 }

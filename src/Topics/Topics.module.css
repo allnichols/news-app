@@ -1,0 +1,9 @@
+.Topics{
+  margin-top: 56px;
+}
+
+.Topics h2{
+  text-transform: capitalize;
+  font-weight: 400;
+  margin-top: 90px;
+}

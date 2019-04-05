@@ -1,0 +1,30 @@
+.NavItems{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: none;
+  align-items: center;
+  text-align: left;
+  height: 100%;
+  margin-top: 50px;
+}
+
+.NavItems li {
+  padding: 15px;
+}
+
+.NavItems li a{
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+@media (min-width:765px) {
+  .NavItems{
+    margin-top: 0;
+  }
+
+  .NavItems li a{
+    font-size: 18px;
+  }
+}
