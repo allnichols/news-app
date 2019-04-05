@@ -4,7 +4,7 @@ import TopNews from './TopNews';
 import styles from './TopNews.module.css';
 import axios from 'axios';
 
-let key = '3de0065bbdae4f598e722fe518a67288';
+let key = '57c8394f5bc742bf9a569cbe33fe0be1';
 
 
 class TopNewsMain extends Component {
