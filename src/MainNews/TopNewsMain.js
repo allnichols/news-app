@@ -7,9 +7,6 @@ import axios from 'axios';
 let key = '3de0065bbdae4f598e722fe518a67288';
 
 
-
-console.log(API_KEY);
-
 class TopNewsMain extends Component {
 
   state = {
