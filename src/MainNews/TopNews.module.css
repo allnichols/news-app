@@ -43,11 +43,6 @@
   font-size: 24px;
 }
 
-.containerDesc a{
-  font-size: 14px;
-  color:blue;
-}
-
 .Published{
   margin: 5px 0 2px;
 }
@@ -59,11 +54,7 @@
     flex-direction: row;
     justify-content: space-around;
   }
-/*
-  .TopNews{
-    width: 60%;
-    margin: 0 auto;
-  } */
+
 
   .TopArticles{
     margin: 25px auto;

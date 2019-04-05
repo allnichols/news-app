@@ -3,7 +3,7 @@ import styles from './MoreStories.module.css';
 
 const moreStories = (props) => {
 
-  let published = props.published;
+  let published = props.published.slice(0,10);
 
     return (
       <div  className={styles.MoreStories} key={props.id}>

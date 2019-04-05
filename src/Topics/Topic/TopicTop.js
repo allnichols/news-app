@@ -8,11 +8,11 @@ const topicTop = (props) => {
   return(
     <div key={props.id} className={styles.Top}>
 
-    <div>
+    <div className={styles.imgContainer}>
       <img src={props.imgUrl} alt="article"/>
     </div>
 
-      <div >
+      <div className={styles.titleContainer}>
         <p>{props.source}</p>
 
         <a href={props.url}>

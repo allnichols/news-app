@@ -21,3 +21,26 @@
   font-size: 24px;
   cursor: pointer;
 }
+
+
+@media (min-width:765px) {
+
+  .Top{
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+  }
+
+  .Top .titleContainer{
+    margin-left: 15px;
+  }
+
+  .Top .imgContainer{
+    max-width: 250px;
+  }
+
+  .imgContainer img{
+    width: 100%;
+  }
+
+}
