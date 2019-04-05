@@ -5,6 +5,8 @@ import styles from './TopNews.module.css';
 import axios from 'axios';
 
 let key = '3de0065bbdae4f598e722fe518a67288';
+let apiKey = process.env.REACT_APP_NEWS;
+console.log(process.env.REACT_APP_NEWS);
 
 class TopNewsMain extends Component {
 
@@ -15,7 +17,7 @@ class TopNewsMain extends Component {
 
   componentDidMount(){
     console.log(this.props);
-    axios.get('https://newsapi.org/v2/top-headlines?country=us&apiKey=' + key)
+    axios.get('https://newsapi.org/v2/top-headlines?country=us&apiKey=' + apiKey)
     .then(response =>{
       let top5 = response.data.articles.slice(0,5);
       let mainNews = response.data.articles.slice(6,19);
