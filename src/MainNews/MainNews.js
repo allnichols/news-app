@@ -43,7 +43,7 @@ class MainNews extends Component{
           </div>
 
           </nav>
-          
+
       </header>
       <Switch>
         <Route path='/' exact component={TopNewsMain} />

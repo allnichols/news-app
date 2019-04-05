@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import MainNews from './MainNews/MainNews';
 
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 
 
 
@@ -10,13 +10,13 @@ class App extends Component {
 
   render() {
     return (
-      <BrowserRouter>
+      <HashRouter basename='/'>
         <div className="App">
 
           <MainNews />
-          
+
         </div>
-      </BrowserRouter>
+      </HashRouter>
     );
   }
 }

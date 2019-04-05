@@ -4,7 +4,8 @@ import styles from './Topics.module.css';
 
 import TopicTop from './Topic/TopicTop';
 
-let key = '3de0065bbdae4f598e722fe518a67288';
+let key = '57c8394f5bc742bf9a569cbe33fe0be1';
+
 
 class Topics extends Component{
 
@@ -16,7 +17,7 @@ class Topics extends Component{
 
   componentDidMount(){
      let query = this.props.match.url.toLowerCase().slice(1);
-     console.log('did mount');
+
      axios.get('https://newsapi.org/v2/everything?q=' + query + '&apiKey=' + key)
      .then(response=> {
        let top5 = response.data.articles.splice(0,5);
@@ -28,7 +29,7 @@ class Topics extends Component{
 
   componentDidUpdate( prevState, snapshot ){
     let newQuery = this.props.match.url.toLowerCase().slice(1);
-    console.log(newQuery);
+    
 
     if ( newQuery !== this.state.query ) {
 
