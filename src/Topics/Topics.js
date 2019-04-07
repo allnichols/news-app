@@ -18,7 +18,7 @@ class Topics extends Component{
   componentDidMount(){
      let query = this.props.match.url.toLowerCase().slice(1);
 
-     axios.get('https://newsapi.org/v2/everything?q=' + query + '&apiKey=' + key)
+     axios.get('https://newsapi.org/v2/top-headlines?country=us?q=' + query + '&apiKey=' + key)
      .then(response=> {
        let top5 = response.data.articles.splice(0,5);
        this.setState({
@@ -29,11 +29,11 @@ class Topics extends Component{
 
   componentDidUpdate( prevState, snapshot ){
     let newQuery = this.props.match.url.toLowerCase().slice(1);
-    
+
 
     if ( newQuery !== this.state.query ) {
 
-      axios.get('https://newsapi.org/v2/everything?q=' + newQuery + '&apiKey=' + key)
+      axios.get('https://newsapi.org/v2/top-headlines?q=' + newQuery + '&apiKey=' + key)
       .then(response=> {
 
         let top5 = response.data.articles.splice(0,5);
