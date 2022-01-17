@@ -1,12 +1,12 @@
-import useGetArticles from "../services/useGetArticles";
+// import useGetArticles from "../services/useGetArticles";
 
-const Home = () => {
-    const articles = useGetArticles();
-    console.log(articles);
+const Home: React.FC<any> = () => {
+    // const [articles, loading, error] = useGetArticles();
+    
     return (
-        <h1>
-            Home
-        </h1>
+        <main className="container mx-auto px-6">
+            <h1>Home</h1>
+        </main>
     )
 }
 

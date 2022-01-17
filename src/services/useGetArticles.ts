@@ -1,9 +1,28 @@
 import { useState, useEffect } from 'react';
 
 
+const url = `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=57c8394f5bc742bf9a569cbe33fe0be1`;
+
+interface articleObject {
+    author: string;
+    content: string;
+    description: string;
+    publishedAt: string;
+    source: {
+        id: string | null;
+        name: string;
+    };
+    title: string;
+    url: string;
+    urlToImage: string;
+  }
+  
+  interface Articles {
+    article: articleObject[];
+  }
 
 const useGetArticles = () => {
-    const [articles, setArticles] = useState<null | Response>(null);
+    const [articles, setArticles] = useState<null | Articles>(null);
     const [loading, setLoading] = useState<Boolean>(true);
     const [error, setError] = useState<Error | null>(null);
     useEffect(() => {
@@ -11,20 +30,24 @@ const useGetArticles = () => {
         setLoading(true);
         (async () => {
             try {
-                const response = await fetch(`https://newsapi.org/v2/top-headlines?country=us?q=bitcoin&apiKey=57c8394f5bc742bf9a569cbe33fe0be1`)
-                const json = await response.json();
-                console.log(json);
+                const response = await fetch(url, { signal: abortController.signal });
+                const data = await response.json();
+                setArticles(data.articles);
+                setLoading(false);
             } catch (error: any) {
+                if(error.name === 'AbortError') {
+                    return;
+                }
                 setError(error);
                 setLoading(false);
             }
         })();
-        // fetch(`https://newsapi.org/v2/top-headlines?country=us?q=tesla&apiKey=57c8394f5bc742bf9a569cbe33fe0be1`)
-        // .then(res => res.json())
-        // .then(data => console.log(data))
+        return () => {
+            abortController.abort();
+        };
     }, [])
 
-    return articles;
+    return [articles, loading, error];
 
 }
 
