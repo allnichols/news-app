@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 
 const url = `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=57c8394f5bc742bf9a569cbe33fe0be1`;
 
-interface articleObject {
+interface Article {
     author: string;
     content: string;
     description: string;
@@ -15,14 +15,10 @@ interface articleObject {
     title: string;
     url: string;
     urlToImage: string;
-  }
-  
-  interface Articles {
-    article: articleObject[];
-  }
+  }[];
 
 const useGetArticles = () => {
-    const [articles, setArticles] = useState<null | Articles>(null);
+    const [articles, setArticles] = useState<null | Article>(null);
     const [loading, setLoading] = useState<Boolean>(true);
     const [error, setError] = useState<Error | null>(null);
     useEffect(() => {
